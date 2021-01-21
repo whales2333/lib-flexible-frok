@@ -72,6 +72,9 @@
             width = 1280 * dpr;
         }
         var rem = width / 10;
+        if (docEl.getBoundingClientRect().width<540) {
+            rem=width / 2.5;
+        }
         docEl.style.fontSize = rem + 'px';
         flexible.rem = win.rem = rem;
     }
